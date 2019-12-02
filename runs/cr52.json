@@ -1,0 +1,39 @@
+{
+	"name" : "Cr52",
+	"description" : "test input file",
+	"out"  : "this/doesnt/really/matter/atm",
+	"code" : "yahfc",
+	"num_procs" : 2,
+	"reaction" : 
+		{
+		"target" : "24 52",
+		"projectile" : "0 1",
+		"proj_e_file" : "/home/awgolas/elist.input",
+		"Delta_e" : "0.001",
+		"lev_option" : "0",
+		"num_mc_samp" : 1000,
+		"fit_aparam" : 0
+		},
+	"uq" : 
+		{
+		"mode" : "mc",
+		"num_samples" : 20,
+		"parameters" : 
+			{
+			"lev_aparam 24 52": 
+				{
+				"type":"uniform",
+				"parameters":[5.0, 8.0]
+				},
+			"lev_aparam 24 53":
+				{
+				"type":"uniform",
+				"parameters":[5.0, 8.0]
+				}	
+		
+			}
+		}
+}
+
+
+

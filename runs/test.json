@@ -1,0 +1,32 @@
+{
+	"name" : "unittest",
+	"description" : "unit test of uq distributions",
+	"out"  : "this/doesnt/really/matter/atm",
+	"code" : "test",
+	"num_procs" : 3,
+	"reaction" : {},
+	"uq" : 
+		{
+		"mode" : "mc",
+		"num_samples" : 10000,
+		"parameters" : 
+			{
+			"uniform": 
+				{
+				"type":"uniform",
+				"parameters":[0.0, 1.0]
+				},
+			"gaussian":
+				{
+				"type":"gauss",
+				"parameters":[0.0, 0.2]
+				},
+			"lognormal":
+				{
+				"type":"lognorm",
+				"parameters":[0.0,1.0]
+				}	
+		
+			}
+		}
+}

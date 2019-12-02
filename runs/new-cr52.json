@@ -1,0 +1,39 @@
+{
+	"name" : "Cr52_Elastic",
+	"description" : "test input file",
+	"out"  : "this/doesnt/really/matter/atm",
+	"code" : "yahfc",
+	"num_procs" : 3,
+	"reaction" : 
+		{
+		"target" : "24 52",
+		"projectile" : "0 1",
+		"proj_eminmax" : "1.1 9.1 0.1",
+		"Delta_e" : 0.05,
+		"lev_option" : "0",
+		"num_mc_samp" : 10000,
+		"fit_aparam" : 0
+		},
+	"uq" : 
+		{
+		"mode" : "mc",
+		"num_samples" : 100,
+		"parameters" : 
+			{
+			"lev_aparam 24 52": 
+				{
+				"type":"gauss",
+				"parameters":[7.0, 1.0]
+				},
+			"lev_aparam 24 53":
+				{
+				"type":"gauss",
+				"parameters":[7.0, 1.0]
+				}	
+		
+			}
+		}
+}
+
+
+
